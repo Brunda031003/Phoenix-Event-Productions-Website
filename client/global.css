@@ -1,0 +1,171 @@
+/** @import must precede all other statements */
+/* TRT Otilito font faces. */
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TRT Otilito";
+  src: url("/fonts/TRTOtilitoTrial-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    /* Brand palette: #FFF3F3 (light blush), #ED1C24 (brand red), #120000 (near-black red) */
+    --background: 0 100% 97%; /* #FFF3F3 */
+    --foreground: 0 100% 3.5%; /* #120000 */
+
+    --card: 0 100% 97%;
+    --card-foreground: 0 100% 3.5%;
+
+    --popover: 0 100% 97%;
+    --popover-foreground: 0 100% 3.5%;
+
+    --primary: 357 85% 52%; /* #ED1C24 */
+    --primary-foreground: 0 100% 97%;
+
+    --secondary: 0 100% 94%; /* subtle blush */
+    --secondary-foreground: 0 100% 3.5%;
+
+    --muted: 0 40% 95%;
+    --muted-foreground: 0 12% 32%;
+
+    --accent: 0 100% 94%;
+    --accent-foreground: 0 100% 3.5%;
+
+    --destructive: 357 85% 52%;
+    --destructive-foreground: 0 100% 97%;
+
+    --border: 0 30% 88%;
+    --input: 0 30% 90%;
+    --ring: 357 85% 52%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar (if used) */
+    --sidebar-background: 0 100% 97%;
+    --sidebar-foreground: 0 100% 3.5%;
+    --sidebar-primary: 357 85% 52%;
+    --sidebar-primary-foreground: 0 100% 97%;
+    --sidebar-accent: 0 100% 94%;
+    --sidebar-accent-foreground: 0 100% 3.5%;
+    --sidebar-border: 0 30% 88%;
+    --sidebar-ring: 357 85% 52%;
+  }
+
+  .dark {
+    --background: 0 100% 3.5%; /* #120000 */
+    --foreground: 0 100% 97%; /* #FFF3F3 */
+
+    --card: 0 100% 6%;
+    --card-foreground: 0 100% 97%;
+
+    --popover: 0 100% 6%;
+    --popover-foreground: 0 100% 97%;
+
+    --primary: 357 85% 52%;
+    --primary-foreground: 0 100% 97%;
+
+    --secondary: 0 40% 14%;
+    --secondary-foreground: 0 100% 97%;
+
+    --muted: 0 35% 12%;
+    --muted-foreground: 0 15% 72%;
+
+    --accent: 0 35% 12%;
+    --accent-foreground: 0 100% 97%;
+
+    --destructive: 357 85% 46%;
+    --destructive-foreground: 0 100% 97%;
+
+    --border: 0 25% 18%;
+    --input: 0 25% 18%;
+    --ring: 357 85% 52%;
+
+    --sidebar-background: 0 100% 3.5%;
+    --sidebar-foreground: 0 100% 97%;
+    --sidebar-primary: 357 85% 52%;
+    --sidebar-primary-foreground: 0 100% 97%;
+    --sidebar-accent: 0 35% 12%;
+    --sidebar-accent-foreground: 0 100% 97%;
+    --sidebar-border: 0 25% 18%;
+    --sidebar-ring: 357 85% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "TRT Otilito", ui-serif, Georgia, serif;
+    font-weight: 400; /* Regular weight for default */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
