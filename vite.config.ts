@@ -5,6 +5,7 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/Phoenix-Event-Productions-Website/",
   server: {
     host: "::",
     port: 8080,
