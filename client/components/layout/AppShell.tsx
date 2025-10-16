@@ -22,7 +22,7 @@ function Header() {
       <div className="container flex h-20 items-center justify-between">
         <Link to="/" className="group inline-flex items-center gap-3">
           <img src="/images/LOGO-RB.png" alt="Pheonix Events Logo" className="inline-block h-12 w-12 box-md shadow-md shadow-primary/30 group-hover:rotate-3 transition-transform" />
-          <span className="text-2xl tracking-tight font-bold text-[#FFF3F3]">Pheonix</span>
+          <span className="text-2xl tracking-tight font-bold text-[#FFF3F3]">Phoenix</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-lg text-[#FFF3F3]">
@@ -67,7 +67,7 @@ function Footer() {
   return (
     <footer className="border-t">
       <div className="container py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="opacity-70">© {new Date().getFullYear()} Pheonix</p>
+        <p className="opacity-70">© {new Date().getFullYear()} Phoenix</p>
         <p className="opacity-70">
           Crafted with <span className="text-primary">♥</span> for unforgettable moments
         </p>

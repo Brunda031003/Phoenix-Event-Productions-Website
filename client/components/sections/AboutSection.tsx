@@ -3,9 +3,9 @@ export default function AboutSection() {
     <section id="about" className="py-12 md:py-20">
       <div className="container grid gap-6 md:grid-cols-2 items-center">
         <div>
-          <h3 className="text-2xl md:text-3xl">About Pheonix Event Production</h3>
+          <h3 className="text-2xl md:text-3xl">About Phoenix Event Production</h3>
           <p className="mt-4 text-base opacity-80">
-            Pheonix Event Production transforms spaces into memorable experiences. We combine design, logistics and storytelling to deliver events that resonate with audiences and clients alike.
+            Phoenix Event Production transforms spaces into memorable experiences. We combine design, logistics and storytelling to deliver events that resonate with audiences and clients alike.
           </p>
 
           <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">

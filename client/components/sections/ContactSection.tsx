@@ -12,15 +12,15 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
                 <span className="font-medium">Mobile:</span>
-                <a href="tel:+11234567890" className="text-primary hover:underline">+1 (123) 456-7890</a>
+                <a href="tel:+11234567890" className="text-primary hover:underline">+91 1234567899</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Email:</span>
-                <a href="mailto:info@pheonix.com" className="text-primary hover:underline">info@pheoni_events.com</a>
+                <a href="mailto:info@pheonix.com" className="text-primary hover:underline">info@phoeni_events.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Instagram:</span>
-                <a href="https://instagram.com/pheoni_events" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@pheoni_events</a>
+                <a href="https://instagram.com/pheoni_events" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@phoeni_events</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Location:</span>
