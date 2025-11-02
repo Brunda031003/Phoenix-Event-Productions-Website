@@ -29,7 +29,7 @@ export default function AboutSection() {
         </div>
 
         <div className="rounded-xl overflow-hidden border">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="About Pheonix Event Production" className="w-full h-80 object-cover" />
+          <img src="/images/gallery/about.jpg" alt="About Pheonix Event Production" className="w-full h-80 object-cover" />
         </div>
       </div>
     </section>

@@ -1,98 +1,72 @@
-import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type Photo = {
   id: string;
   title: string;
-  category: Category;
   url: string;
   aspect?: "square" | "portrait" | "landscape";
 };
 
-type Category = "All" | "Weddings" | "Corporate" | "Concerts" | "Birthdays";
-
-const CATEGORIES: Category[] = ["All", "Weddings", "Corporate", "Concerts", "Birthdays"];
-
 const PHOTOS: Photo[] = [
   {
-    id: "w1",
-    title: "Sunset Vows",
-    category: "Weddings",
-    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
-    aspect: "portrait",
-  },
-  {
-    id: "w2",
-    title: "First Dance",
-    category: "Weddings",
-    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-    aspect: "square",
-  },
-  {
-    id: "c1",
-    title: "Keynote Lights",
-    category: "Corporate",
-    url: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1600&auto=format&fit=crop",
+    id: "chairs",
+    title: "Elegant Seating",
+    url: "/images/gallery/chairs.jpg",
     aspect: "landscape",
   },
   {
-    id: "c2",
-    title: "Networking Glow",
-    category: "Corporate",
-    url: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop",
-    aspect: "portrait",
+    id: "chairs3",
+    title: "Event Chairs",
+    url: "/images/gallery/chairs3.jpg",
+    aspect: "landscape",
   },
+  
+  
   {
-    id: "m1",
-    title: "Stage Fire",
-    category: "Concerts",
-    url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop",
+    id: "tent1",
+    title: "Outdoor Tent",
+    url: "/images/gallery/tent.jpg",
     aspect: "landscape",
   },
   {
-    id: "m2",
-    title: "Crowd Wave",
-    category: "Concerts",
-    url: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600&auto=format&fit=crop",
+    id: "chairs1",
+    title: "Chair Arrangement",
+    url: "/images/gallery/chairs1.jpg",
     aspect: "square",
   },
   {
-    id: "b1",
-    title: "Cake Sparkles",
-    category: "Birthdays",
-    url: "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?q=80&w=1600&auto=format&fit=crop",
-    aspect: "portrait",
+    id: "tent2",
+    title: "Pagoda Tent",
+    url: "/images/gallery/tent1.jpg",
+    aspect: "square",
   },
   {
-    id: "b2",
-    title: "Confetti Shot",
-    category: "Birthdays",
-    url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
+    id: "super1",
+    title: "Stage Structure",
+    url: "/images/gallery/superstructure.jpg",
     aspect: "landscape",
   },
   {
-    id: "m3",
-    title: "Encore",
-    category: "Concerts",
-    url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop",
-    aspect: "portrait",
-  },
-  {
-    id: "c3",
-    title: "Boardroom Brilliance",
-    category: "Corporate",
-    url: "https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600&auto=format&fit=crop",
+    id: "super2",
+    title: "Superstructure Design",
+    url: "/images/gallery/superstructure1.jpg",
     aspect: "square",
   },
+   {
+    id: "tent3",
+    title: "Closeup",
+    url: "/images/gallery/tent2.jpg",
+    aspect: "square",
+  }
+  // {
+  //   id: "about",
+  //   title: "About Us",
+  //   url: "/images/gallery/about.jpg",
+  //   aspect: "portrait",
+  // },
 ];
 
 export default function GallerySection() {
-  const [active, setActive] = useState<Category>("All");
-
-  const filtered = useMemo(() => {
-    if (active === "All") return PHOTOS;
-    return PHOTOS.filter((p) => p.category === active);
-  }, [active]);
 
   return (
     <section id="gallery" className="py-12 md:py-20">
@@ -107,28 +81,10 @@ export default function GallerySection() {
           <p className="mt-3 md:mt-4 text-sm md:text-base opacity-80 max-w-2xl mx-auto">
             A living archive of weddings, corporate gatherings, concerts, and birthdays we've brought to life.
           </p>
-
-          <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-2">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setActive(c)}
-                className={cn(
-                  "px-4 py-2 rounded-full border transition-all",
-                  active === c
-                    ? "bg-primary text-primary-foreground border-primary shadow shadow-primary/30"
-                    : "bg-background hover:bg-accent border-border"
-                )}
-                aria-pressed={active === c}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
         </header>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {filtered.map((photo) => (
+          {PHOTOS.map((photo) => (
             <figure
               key={photo.id}
               className={cn(
@@ -148,9 +104,6 @@ export default function GallerySection() {
                 <div className="rounded bg-background/80 px-2 py-1 text-xs shadow-sm">
                   {photo.title}
                 </div>
-                <span className="rounded-full bg-primary text-primary-foreground text-[10px] px-2 py-1 uppercase tracking-wide shadow shadow-primary/30">
-                  {photo.category}
-                </span>
               </div>
             </figure>
           ))}

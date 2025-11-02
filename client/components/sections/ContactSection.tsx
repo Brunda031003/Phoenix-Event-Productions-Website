@@ -12,7 +12,7 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
                 <span className="font-medium">Mobile:</span>
-                <a href="tel:+11234567890" className="text-primary hover:underline">+91 1234567899</a>
+                <a href="tel:+11234567890" className="text-primary hover:underline">+91 7899389948</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Email:</span>
@@ -24,7 +24,7 @@ export default function ContactSection() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">Location:</span>
-                <a href="https://maps.google.com/?q=Zenith+Den+Location" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View on Map</a>
+                <a href="https://maps.app.goo.gl/ezXM3wbzHPnBR5es5?g_st=awb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View on Map</a>
               </div>
             </div>
           </CardContent>

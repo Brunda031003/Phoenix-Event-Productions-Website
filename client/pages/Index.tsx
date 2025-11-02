@@ -1,5 +1,5 @@
 import AboutSection from "@/components/sections/AboutSection";
-import SimpleGallery from "@/components/sections/SimpleGallery";
+import GallerySection from "@/components/gallery/GallerySection";
 import EquipmentsSection from "@/components/sections/EquipmentsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Landing_logo from '../images/Landing_logo.png';
@@ -36,7 +36,7 @@ export default function Index() {
 
       <AboutSection />
 
-      <SimpleGallery />
+      <GallerySection />
 
       <EquipmentsSection />
 
