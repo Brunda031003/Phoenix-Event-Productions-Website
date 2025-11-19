@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const EQUIPMENTS = [
-  { name: "Digital Mixer (32ch)", desc: "Clean audio routing for complex shows" },
-  { name: "LED Wall Panels", desc: "High-resolution stage backdrops" },
-  { name: "Moving Head Lights", desc: "Dynamic lighting with precision control" },
-  { name: "Wireless Mic Package", desc: "Reliable RF for presenters and performers" },
-  { name: "FOH Speakers", desc: "High-fidelity PA systems" },
-  { name: "Stage Truss & Rigging", desc: "Safe and modular structural support" },
+  { name: "Tiffany Chairs", desc: "Elegant seating for premium events"},
+  { name: "2x6 Tables", desc: "Rectangular multipurpose tables"},
+  { name: "Pipependal", desc: "Basic tent structure with cloth covering"},
+  { name: "Stage", desc: "Main elevated platform for events"},
+  { name: "Tepoy", desc: "Small side table for lounges" },
+  { name: "4ft Lamp", desc: "General illumination for event areas" },
 ];
 
 export default function EquipmentsSection() {
