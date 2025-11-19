@@ -1,18 +1,18 @@
-import { PropsWithChildren } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-export default function AppShell({ children }: PropsWithChildren) {
+export default function AppShell() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
-      <main className={cn("flex-1")}>{children}</main>
+      <main className={cn("flex-1")}>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
 }
-
-import { useState } from "react";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-lg text-[#FFF3F3]">
-          <a href="#" className="hover:text-primary">Home</a>
+          <Link to="/" className="hover:text-primary">Home</Link>
           <a href="#about" className="hover:text-primary">About</a>
           <a href="#gallery" className="hover:text-primary">Gallery</a>
           <a href="#equipments" className="hover:text-primary">Equipments</a>
@@ -51,7 +51,7 @@ function Header() {
       {open && (
         <div className="md:hidden border-t">
           <div className="px-4 py-4 flex flex-col gap-3 text-[#FFF3F3]">
-            <a href="#" onClick={() => setOpen(false)} className="py-2">Home</a>
+            <Link to="/" onClick={() => setOpen(false)} className="py-2">Home</Link>
             <a href="#about" onClick={() => setOpen(false)} className="py-2">About</a>
             <a href="#gallery" onClick={() => setOpen(false)} className="py-2">Gallery</a>
             <a href="#equipments" onClick={() => setOpen(false)} className="py-2">Equipments</a>

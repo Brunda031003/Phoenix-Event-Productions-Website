@@ -1,0 +1,3 @@
+- [x] Add "Check out more" button to EquipmentsSection.tsx
+- [x] Create EquipmentsPage.tsx with categorized equipments list and dropdown filter
+- [ ] Add /equipments route to App.tsx

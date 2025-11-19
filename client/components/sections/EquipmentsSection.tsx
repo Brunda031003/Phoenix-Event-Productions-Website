@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EQUIPMENTS = [
   { name: "Digital Mixer (32ch)", desc: "Clean audio routing for complex shows" },
   { name: "LED Wall Panels", desc: "High-resolution stage backdrops" },
@@ -21,6 +23,15 @@ export default function EquipmentsSection() {
               <div className="mt-2 text-sm opacity-80">{e.desc}</div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            to="/equipments"
+            className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground px-6 py-3 text-sm shadow shadow-primary/30 hover:bg-primary/90 transition-colors"
+          >
+            Check out more
+          </Link>
         </div>
       </div>
     </section>
