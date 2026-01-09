@@ -11,21 +11,22 @@ const items = [
 
 export default function Equipments() {
   return (
-    <section id="equipments" className="py-20 mx-20 sm:mx-22 md:mx-24">
+    <section id="equipments" className="py-20 mx-6 md:mx-20">
       <div className="container">
 
         <header className="text-center mb-12">
-          <h2 className="text-4xl font-semibold">Equipments</h2>
-          <p className=" mt-2">
+          <h2 className="text-3xl md:text-6xl font-semibold">Equipments</h2>
+          <p className="mt-2 opacity-70">
             We maintain top-tier equipment to ensure every event runs perfectly.
           </p>
         </header>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Mobile: 2 cols | Desktop: 3 cols */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {items.map(([name, desc]) => (
             <div
               key={name}
-              className="bg-card border border-border rounded-xl p-6"
+              className="bg-card border rounded-xl p-6"
             >
               <h3 className="font-semibold mb-2">{name}</h3>
               <p className="text-sm opacity-70">{desc}</p>

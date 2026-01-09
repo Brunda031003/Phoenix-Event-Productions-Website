@@ -6,12 +6,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50 backdrop-blur bg-black/90 border-b border-white/10">
-      <div className="container mx-auto flex h-20 items-center justify-between px-20">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6 md:px-20">
 
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-3 ml-6 group"
+          className="flex items-center gap-3 ml-2 md:ml-6 group"
         >
           <img
             src="/images/LOGO-RB.png"

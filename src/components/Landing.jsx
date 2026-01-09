@@ -1,25 +1,41 @@
+import { useState } from "react";
+
 export default function Landing() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/Landing-background.png')" }}
+      className="relative h-screen flex items-center overflow-hidden bg-black"
     >
+      {/* Lazy Background Image */}
+      <img
+        src="/Landing-background.webp"
+        alt="Phoenix Event Background"
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        className={`
+          absolute inset-0 w-full h-full object-cover transition-all duration-700
+          ${loaded ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-105 blur-lg"}
+        `}
+      />
+
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-20">
         <div className="max-w-3xl">
 
-          {/* Logo */}
+          {/* Logo (lazy) */}
           <img
             src="/images/Landing_logo.png"
             alt="Phoenix Event Productions"
-            className="w-72 mb-6 drop-shadow-xl"
+            loading="lazy"
+            decoding="async"
+            className="w-52 md:w-72 mb-6 drop-shadow-xl"
           />
-
-          
 
           {/* Subtitle */}
           <p className="mt-6 text-lg text-white/80 max-w-xl">

@@ -5,8 +5,11 @@
   font-weight: normal;
 }
 
+body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, label {
+  font-family: "Otilito", system-ui, sans-serif !important;
+}
+
 body {
-  font-family: "Otilito", system-ui, sans-serif;
   background: hsl(0, 100%, 97%);
   color: #111;
 }

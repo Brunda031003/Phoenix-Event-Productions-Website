@@ -1,11 +1,11 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 mx-20 sm:mx-20 md:mx-22">
+    <section id="about" className="py-20 mx-6 md:mx-20">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
 
         {/* Text */}
         <div>
-          <h2 className="text-4xl font-semibold mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             About Phoenix Event Production
           </h2>
 
@@ -22,7 +22,10 @@ export default function About() {
               ["Technical Operations", "Audio, lighting, and AV management"],
               ["Client-first Service", "Transparent, reliable, and on-time"],
             ].map(([title, desc]) => (
-              <div key={title} className="bg-card border border-border rounded-xl p-5">
+              <div
+                key={title}
+                className="bg-card border border-gray-300 rounded-xl p-5"
+              >
                 <h4 className="font-semibold mb-1">{title}</h4>
                 <p className="text-sm opacity-70">{desc}</p>
               </div>
@@ -33,7 +36,8 @@ export default function About() {
         {/* Image */}
         <img
           src="/images/gallery/about.jpg"
-          className="rounded-xl border border-border shadow-sm"
+          alt="About Phoenix"
+          className="rounded-xl border border-gray-300 shadow-sm w-full max-h-[400px] object-cover"
         />
       </div>
     </section>
